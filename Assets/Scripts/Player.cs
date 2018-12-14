@@ -70,42 +70,42 @@ public class Player : MonoBehaviour
     LayerMask groundLayerMask =
     LayerMask.GetMask("Ground");
     //Ask the player's collider if we are touching the LayerMask
-    bool touchingGround =
-    playerCollider.IsTouching.TouchingLayers(groundLayerMask);
+   // bool touchingGround =
+   // playerCollider.IsTouching.TouchingLayers(groundLayerMask);
 
-    bool jumpButtonPressed =
-        Input.GetButtonDown(jumpButton);
-    if (jumpButtonPressed == ture && touchingGround == true)
+   // bool jumpButtonPressed =
+   //     Input.GetButtonDown(jumpButton);
+   // if (jumpButtonPressed == ture && touchingGround == true)
 
-        {
+    //    {
         //We have pressed Jump so we should set our upward velocity to ouyr jumpSpeed
-        velocity.y = jumpSpeed;
+  //      velocity.y = jumpSpeed;
 
         //Give the velocity to the rigidbody
-        physicsBody.velocity = velocity;
-        }
+  //      physicsBody.velocity = velocity;
+  //      }
  
 }
 
-    public void Kill()
-    {
+  //  public void Kill()
+   // {
         //Take away a life and save that change
-        livesObject.LoseLife();
-        livesObject.SaveLives();
+        //livesObject.LoseLife();
+       // livesObject.SaveLives();
 
         //Check if it's game over
 
-        bool gameOver = livesObject.isGameOver();
+      //  bool gameOver = livesObject.isGameOver();
 
         //If it is game over, load the game over screen
 
-
-        if (gameOver == true)
-        {
-            SceneManager.LoadScene("GameOver");
-        }
-        else
-        {
+//
+   //     if (gameOver == true)
+    //    {
+    //        SceneManager.LoadScene("GameOver");
+   //     }
+   //     else
+ //       {
 
 
             //If it is not game over, reset the current level to restart from the beginning
@@ -115,14 +115,14 @@ public class Player : MonoBehaviour
             //First, ask unity what the current level is
 
 
-            Scene currentLevel = SceneManager.GetActiveScene();
+ //           Scene currentLevel = SceneManager.GetActiveScene();
 
-            SceneManager.LoadScene(currentLevel.buildIndex);
-        }
+ //           SceneManager.LoadScene(currentLevel.buildIndex);
+  //      }
+//
+ //   }
 
-    }
-
-}
+//}
 
 
 
